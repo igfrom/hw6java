@@ -18,9 +18,9 @@ public class hw6sem {
 
     public static void main(String[] args) {
 
-        Person person1 = new Person("Дарья", "Черная", 18, "женский");
-        Person person2 = new Person("Дмитрий", "Капустин", 31, "мужской");
-        Person person3 = new Person("Дмитрий", "Елиферов", 45, "мужской");
+        Person person1 = new Person("Дарья", "Черная", 18, "женский", "Красноярск");
+        Person person2 = new Person("Дмитрий", "Капустин", 31, "мужской", "Назарово");
+        Person person3 = new Person("Дмитрий", "Елиферов", 45, "мужской", "Москва");
 
         ArrayList<Person> arrayOfPersons = new ArrayList<>();
         arrayOfPersons.add(person1);

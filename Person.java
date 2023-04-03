@@ -6,11 +6,13 @@ public class Person {
     private String surname;
     private Integer age;
     private String gender;
-    Person(String personName, String personSurname, Integer personAge, String personGender){
+    private String town;
+    Person(String personName, String personSurname, Integer personAge, String personGender, String personTown){
         name = personName;
         surname = personSurname;
         age = personAge;
         gender = personGender;
+        town = personTown;
     }
 
     public String getName(){
@@ -29,8 +31,12 @@ public class Person {
         return gender;
     }
 
+    public String getTown(){
+        return gender;
+    }
+
     public String toString(){
-        return "[Имя: " + name + ", Фамилия: " + surname + ", Возраст:" + age + ", Пол: " + gender + "]";
+        return "[Имя: " + name + ", Фамилия: " + surname + ", Возраст:" + age + ", Пол: " + gender + ", Город: "+ town + "]";
     }
 
     public boolean equals(Object obj){
@@ -41,11 +47,11 @@ public class Person {
             return false;
         }
         Person anotherPerson = (Person) obj;
-        return Objects.equals(name, anotherPerson.name) && surname == anotherPerson.surname && age == anotherPerson.age && gender == anotherPerson.gender;
+        return Objects.equals(name, anotherPerson.name) && surname == anotherPerson.surname && age == anotherPerson.age && gender == anotherPerson.gender && town == anotherPerson.town;
     }
 
     public int hashCode(){
-        return Objects.hash(name, surname, age, gender);
+        return Objects.hash(name, surname, age, gender, town);
     }
 
     public String fullName(){
